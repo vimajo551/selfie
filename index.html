@@ -20,18 +20,20 @@
         
         <div class="form-group">
             <h3>Diga "selfie" para tirar suas selfies e fazer a sua colagem.</h3>
+            <label>Sua saída de voz : </label>
+            <textarea class="form-control" id="textbox" readonly="true"></textarea>
         </div>
 
-        <button onclick="starting()" class="btn btn-info" >Iniciar</button>
         <p>Pressione o botão Iniciar</p>
+        <button onclick="starting()" class="btn btn-info" >Iniciar</button>
         <div class="row">
             <div class="col-md-6">
-                <label> Sua webcam:  </label>
+                <label> Pré-visualização da webcam  </label>
                 <div id="camera"></div>
                 <br>
                     </div>
             <div class="col-md-6">
-                <label>Sua selfie ira aparecer aqui:  </label>
+                <label>Sua captura  </label>
                 <div id="result"></div>
                 <br>
             
@@ -44,5 +46,4 @@
 
     <script src="main.js"></script>
 </body>
-
 </html>
