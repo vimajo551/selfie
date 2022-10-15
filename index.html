@@ -1,25 +1,26 @@
 <html>
-
-<head>
-    <title>Aplicativo de Colagem</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js" type="text/javascript"></script>
-
+    <head>
+       <title>App Minha selfie</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="style.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
 </head>
-
+ 
 <body>
     <div class="container">
     <center>
-        <h1>App Selfie por voz </h1>
+
+        <h1>App Selfie por voz 
+            <img src="colagem.webp" id="logo_img">
+        </h1>
         <hr>
-        <h4>Pressione permitir assim que o pop-up for exibido. Depois de dar um comando de voz</h4>
+        <h4 style="color:red;">Pressione permitir assim que o pop-up for exibido. Depois de dar um comando de voz</h4>
         
         <div class="form-group">
-            <h3>Diga "selfie" para tirar suas selfies e fazer a sua colagem.</h3>
+            <h3>Diga "Tire minha selfie"</h3>
             <label>Sua saída de voz : </label>
             <textarea class="form-control" id="textbox" readonly="true"></textarea>
         </div>
@@ -32,9 +33,13 @@
                 <div id="camera"></div>
                 <br>
                     </div>
+                    <label>Sua captura  </label>
             <div class="col-md-6">
-                <label>Sua captura  </label>
-                <div id="result"></div>
+                <div id="result1"></div>
+                <div class="col-md-6">
+                    <div id="result2"></div>
+                    <div class="col-md-6">
+                        <div id="result3"></div>
                 <br>
             
             </div>

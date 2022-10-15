@@ -9,14 +9,35 @@ function starting(){
 recognition.onresult = function(event){
     var content = event.results[0][0].transcript;
     document.getElementById("textbox").innerHTML = content;
-    speak();
+    if(content == "tire minha selfie"){
+        speak();
+    }
 }
+var cont = 0; 
 function speak(){
     sint = window.speechSynthesis;
-    speakdata = document.getElementById("textbox").value;
-    var utterthis = new SpeechSynthesisUtterance(speakdata);
-    sint.speak(utterthis)
     Webcam.attach(getcamera);
+    setTimeout(function(){
+        speakdata = "tirando sua selfie em 5 segundos";
+        imgId = "fototirada1";
+        takeselfie();
+         var utterthis = new SpeechSynthesisUtterance(speakdata);
+         sint.speak(utterthis)
+    },5000)
+    setTimeout(function(){
+        speakdata = "tirando sua selfie em 10 segundos";
+        imgId = "fototirada2";
+        takeselfie();
+         var utterthis = new SpeechSynthesisUtterance(speakdata);
+         sint.speak(utterthis)
+    },10000)
+    setTimeout(function(){
+        speakdata = "tirando sua selfie em 15 segundos";
+        imgId = "fototirada3";
+        takeselfie();
+         var utterthis = new SpeechSynthesisUtterance(speakdata);
+         sint.speak(utterthis)
+    },15000)
 }
 var getcamera = document.getElementById("camera")
 Webcam.set({
@@ -25,3 +46,16 @@ Webcam.set({
     image_format: 'jpeg',
     jpeg_quality: 90
  });
+function takeselfie(){
+    Webcam.snap(function(data_uri){
+        if(imgId=="fototirada1"){
+            document.getElementById("result1").innerHTML = '<img id="fototirada1" src="'+data_uri+'" />'
+        }
+        if(imgId=="fototirada2"){
+            document.getElementById("result2").innerHTML = '<img id="fototirada2" src="'+data_uri+'" />'
+        }
+        if(imgId=="fototirada3"){
+            document.getElementById("result3").innerHTML = '<img id="fototirada3" src="'+data_uri+'" />'
+        }
+    })
+}
