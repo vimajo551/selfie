@@ -17,22 +17,22 @@ var cont = 0;
 function speak(){
     sint = window.speechSynthesis;
     Webcam.attach(getcamera);
+    speakdata = "tirando sua selfie em 5 segundos";
     setTimeout(function(){
-        speakdata = "tirando sua selfie em 5 segundos";
+        speakdata = "tirando sua selfie em 10 segundos";
         imgId = "fototirada1";
         takeselfie();
          var utterthis = new SpeechSynthesisUtterance(speakdata);
          sint.speak(utterthis)
     },5000)
     setTimeout(function(){
-        speakdata = "tirando sua selfie em 10 segundos";
         imgId = "fototirada2";
+        speakdata = "tirando sua selfie em 15 segundos";
         takeselfie();
          var utterthis = new SpeechSynthesisUtterance(speakdata);
          sint.speak(utterthis)
     },10000)
     setTimeout(function(){
-        speakdata = "tirando sua selfie em 15 segundos";
         imgId = "fototirada3";
         takeselfie();
          var utterthis = new SpeechSynthesisUtterance(speakdata);
